@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report id="report_order_label_gst" 
+        model="sale.order" 
+        name="order.label" 
+        string="Etiqueta de Pedidos" 
+        xml="gst_validate_orders/report/order_label.xml" 
+        xsl="gst_validate_orders/report/order_label.xsl"/>
+        
+    </data>
+</openerp>

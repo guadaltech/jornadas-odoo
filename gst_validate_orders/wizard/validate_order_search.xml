@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="validate_order_search_view" model="ir.ui.view">
+            <field name="name">Search Orders</field>
+            <field name="model">validate.order.search</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+             <form string="Search order">
+                 <separator colspan="4" string="Search order for Ref" />
+                 <field name="search_field" /> 
+                 <button name="search" string="Search" type="object" icon="terp-stock_effects-object-colorize"/>                
+            </form>
+            </field>
+        </record>
+
+        <record id="action_validate_order_search_view" model="ir.actions.act_window">
+            <field name="name">Search Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">validate.order.search</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="validate_order_search_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="action_validate_order_search_view"
+            id="menu_action_validate_order_search_view"
+            web_icon="images/barcodereader.png"
+            web_icon_hover="images/barcodereader.png" 
+        />	
+    </data>
+</openerp>

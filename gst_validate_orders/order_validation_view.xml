@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="validation_order_tree_gst" model="ir.ui.view">
+            <field name="name">validation.order.tree.gst</field>
+            <field name="model">order.validation</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="qty_to_validate_total"/>
+                    <field name="qty_total"/>
+                    <field name="validation"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="validation_order_form_gst" model="ir.ui.view">
+            <field name="name">validation.order.form.gst</field>
+            <field name="model">order.validation</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="start_date" colspan="2" readonly="1"/>
+                    <field name="end_date" colspan="2" readonly="1"/>
+                    <field name="name" colspan="2"/>
+                    <button type="object" string="Validar Pedido" name="open_kanban_product"/>
+                    <button type="object" string="Actualizar" name="actualizar"/>
+                    <newline/>
+                    <field name="product_lines" nolabel="1" colspan="4"/>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="validation_order_line_tree_gst" model="ir.ui.view">
+            <field name="name">validation.order.line.tree.gst</field>
+            <field name="model">order.validation.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="sec"/>
+                    <field name="product_id"/>
+                    <field name="qty_to_validate"/>
+                    <field name="qty"/>
+
+                </data>
+            </field>
+        </record>
+
+        <record id="validation_order_line_kanban_gst" model="ir.ui.view">
+            <field name="name">validation.order.line.kanban.gst</field>
+            <field name="model">order.validation.line</field>
+            <field name="type">form</field>
+            <field name="view_mode">kanban</field>
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="product_id"/>
+                    <field name="product_image"/>
+                    <field name="qty_to_validate"/>
+                    <field name="qty"/>
+                    <field name="validation"/>
+                    <field name="ean13"/>
+                    <field name="ean_pack"/>
+                    <field name="sec"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_product_vignette oe_product_kk_kanban">
+                                <div id="circle"
+                                     t-att-style="kanban_color2(record.qty_to_validate.value,record.qty.value)"
+                                     t-att-title="record.validation.value"></div>
+                                <div class="oe_product_img">
+                                    <img t-att-src="kanban_image('order.validation.line', 'product_image', record.id.value)"
+                                         class="oe_product_photo"/>
+                                </div>
+                                <div class="oe_product_desc">
+
+                                    <ul>
+                                        <li style=" height: 157px;overflow: hidden;">
+                                            <field name="product_id"/>
+                                        </li>
+                                        <li>
+                                            <b>Cant. Captada:</b>
+                                            <field name="qty_to_validate"/>
+                                        </li>
+                                        <li>
+                                            <b>Cant. Total:</b>
+                                            <field name="qty"/>
+                                        </li>
+                                        <!-- <li> <field name="ean13"/></li> -->
+                                    </ul>
+                                </div>
+                                <!-- <h4><a type="edit"><field name=	"product_id"/></a></h4> -->
+                            </div>
+                            <script>
+                                $('.oe_product_photo').load(function() { if($(this).width() &gt; $(this).height()) {
+                                $(this).addClass('oe_product_photo_wide') } });
+                            </script>
+                            <div/>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+        <record id="validation_order_line_search_gst" model="ir.ui.view">
+            <field name="name">validation.order.line.search.gst</field>
+            <field name="model">order.validation.line</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                    <!-- <field name="order_id" /> -->
+
+                    <filter name="validate" string='No validado' icon="terp-stock_symbol-selection"
+                            domain="[('validation','not in',['C'])]"/>
+                    <field name="product_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="validation_order_line_form_gst" model="ir.ui.view">
+            <field name="name">validation.order.line.form.gst</field>
+            <field name="model">order.validation.line</field>
+            <field name="type">form</field>
+            <field name="view_mode">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!-- <field name="order_id" /> -->
+                    <field name="sec"/>
+                    <field name="product_id"/>
+                    <field name="product_image" widget="image"/>
+                    <field name="qty_to_validate"/>
+                    <field name="qty"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_validation_order" model="ir.actions.act_window">
+            <field name="name">Validar Pedidos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">order.validation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem action="action_validation_order" id="menu_validation_order"
+                  web_icon="images/barcodereader.png"
+                  web_icon_hover="images/barcodereader.png"
+        />
+
+
+    </data>
+</openerp>

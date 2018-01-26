@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sale_form_hamabeads_validate_view" model="ir.ui.view">
+            <field name="name">sale.hamabeads.validate.form</field>
+            <field name="model">sale.order</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field eval="250" name="priority"/>
+            <field name="arch" type="xml">
+            	<data>
+					<field name="name" position="before">
+                        <field name="start_date_validation" string="Inicio Validación" colspan="2"/>
+                        <field name="end_date_validation" string="Fin Validación" colspan="2"/>
+            			<field name="validation" readonly="1" />
+            		</field>
+
+
+				</data>
+            </field>
+        </record>
+
+        <record id="view_sale_order_include_message_validate_tree" model="ir.ui.view">
+			<field name="name">sale.order.message.validate.tree</field>
+			<field name="model">sale.order</field>
+			<field name="type">form</field>
+			<field name="inherit_id"
+				ref="sale.view_order_tree" />
+			<field name="arch" type="xml">
+				<data>
+					<field name="name" position="before">
+            			<field name="validation" invisible="1"/>
+
+            		</field>
+            		<tree position="attributes">
+	            	 	<attribute name='colors'>orange:validation == 'B' and state !='cancel';green:validation == 'C' and state !='cancel';grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except')</attribute>
+	            	 </tree>
+				</data>
+			</field>
+		</record>
+
+
+
+
+        <record id="sale_order_tree_hamabeads_validate_view" model="ir.ui.view">
+            <field name="name">sale.order.hamabeads.validate.tree</field>
+            <field name="model">sale.order</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="sale.view_order_tree" />
+            <field eval="200" name="priority"/>
+            <field name="arch" type="xml">
+            	<data>
+
+
+            		<field name="state" position="before">
+            			<field name="validation" invisible="1"/>
+            		</field>
+            		<tree position="attributes">
+	            	 	<attribute name='colors'>orange:validation == 'B' and state !='cancel';green:validation == 'C' and state !='cancel';grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except')</attribute>
+	            	 </tree>
+				</data>
+            </field>
+        </record>
+
+		<!-- <record id="view_sales_order_filter_validate_inherit" model="ir.ui.view">
+            <field name="name">sale.order.list.select.validate.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="type">search</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter" />
+            <field name="arch" type="xml">
+            	<field name="name" position="before" >
+            	 	<newline />
+                </field>
+
+            </field>
+		</record>    -->
+
+	</data>
+</openerp>
