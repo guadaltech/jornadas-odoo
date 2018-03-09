@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings_save"
+        android:icon="@drawable/ic_action_save"
+        android:orderInCategory="101"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/ab_action_save"/>
+    <item
+        android:id="@+id/action_settings_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:orderInCategory="102"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/ab_action_cancel"/>
+
+</menu>

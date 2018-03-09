@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+            <solid android:color="@color/row_listcellitem_tv3" >
+            </solid>
+        </shape>
+    </item>
+    <item>
+        <rotate
+            android:fromDegrees="225"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="225" >
+            <shape android:shape="line" >
+                <stroke
+                    android:width="1dip"
+                    android:color="@color/row_listcellitem_tv1" />
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_pass"
+        android:icon="@drawable/transparent"
+        android:orderInCategory="101"
+        android:showAsAction="always"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="102"
+        android:showAsAction="always"
+        android:title="@string/action_settings"/>
+
+</menu>

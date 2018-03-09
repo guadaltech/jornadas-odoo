@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_listcellitem_height"
+    android:padding="6dp" >
+
+    <TextView
+        android:id="@+id/tv_cell_history_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/history_id"
+        android:textSize="@dimen/row_listcellitem_tv1_size" />
+
+    <TextView
+        android:id="@+id/tv_cell_history_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cell_history_1"
+        android:layout_toLeftOf="@+id/tv_cell__history_3"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/history_cliente"
+        android:textSize="@dimen/row_listcellitem_tv2_size" />
+
+    <TextView
+        android:id="@+id/tv_cell_history_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cell_history_1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/history_fecha"
+        android:textSize="@dimen/row_listcellitem_tv3_size" />
+    <TextView
+        android:id="@+id/tv_cell_history_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cell_history_1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_above="@+id/tv_cell_history_3"
+        android:text="@string/history_total"
+        android:textSize="@dimen/row_listcellitem_tv3_size" />
+
+</RelativeLayout>

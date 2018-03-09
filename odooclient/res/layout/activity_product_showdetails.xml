@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_reference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="4dip" >
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_reference_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REF."
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_reference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text=". . ."
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/iv_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:longClickable="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_repeat" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_rectangle" />
+            </FrameLayout>
+
+            <es.guadaltech.odoo.misc.view.TextViewOpenBol
+                android:id="@+id/tv_product_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:text=". . ."
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_price"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_list_price_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="P. estándar"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_list_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_cost_price_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="P. de coste"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_cost_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/details_separator" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_stock"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_real_stock_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="Stock real"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_real_stock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_virtual_stock_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="Stock virtual"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_virtual_stock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/details_separator" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_general_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción del producto"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_general_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_virtual_sale_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción de venta"
+                    android:textColor="@color/details_primary"
+                    android:textSize="@dimen/details_primary_text" />
+
+                <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                    android:id="@+id/tv_product_details_sale_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=". . ."
+                    android:textColor="@color/details_secondary"
+                    android:textSize="@dimen/details_secondary_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/details_separator" />
+
+            <LinearLayout
+                android:id="@+id/ll_product_extra_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_product_soldable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                        android:id="@+id/tv_product_details_soldable_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_details_soldable"
+                        android:textColor="@color/details_primary"
+                        android:textSize="@dimen/details_primary_text" />
+
+                    <CheckBox
+                        android:id="@+id/cb_product_soldable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:enabled="false"
+                        android:text="@string/empty" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_product_purchasable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                        android:id="@+id/tv_product_details_purchasable_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_details_purchase"
+                        android:textColor="@color/details_primary"
+                        android:textSize="@dimen/details_primary_text" />
+
+                    <CheckBox
+                        android:id="@+id/cb_product_purchasable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:enabled="false"
+                        android:text="@string/empty" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_product_expensable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                        android:id="@+id/tv_product_expensable_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_details_expensable"
+                        android:textColor="@color/details_primary"
+                        android:textSize="@dimen/details_primary_text" />
+
+                    <CheckBox
+                        android:id="@+id/cb_product_expensable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:enabled="false"
+                        android:text="@string/empty" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_product_details_zoomed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:longClickable="false"
+        android:visibility="gone" />
+
+</FrameLayout>

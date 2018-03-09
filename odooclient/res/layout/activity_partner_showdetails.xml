@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="4dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_partner_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_name_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_name"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_name"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="true"
+        android:longClickable="false"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_mobile_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_mobile"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_call" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="true"
+        android:longClickable="false"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_phone_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_phone"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_call" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_phone"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_emails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="true"
+        android:longClickable="false"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_emails_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_emails"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_emails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_email" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_emails"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_city_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_city"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_city"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_function_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_function"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_function"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_function"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_iscustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_iscustomer_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_iscustomer"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <CheckBox
+            android:id="@+id/cb_partner_iscustomer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:enabled="false"
+            android:text="@string/empty" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_iscustomer"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_issupplier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_issupplier_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_issupplier"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <CheckBox
+            android:id="@+id/cb_partner_issupplier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:enabled="false"
+            android:text="@string/empty" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_partner_issupplier"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="2dp"
+        android:background="@color/details_separator"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_partner_sales_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_partner_sales_history_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/partner_details_sales_history"
+            android:textColor="@color/details_primary"
+            android:textSize="@dimen/details_primary_text" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_partner_sales_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/dots"
+            android:textColor="@color/details_secondary"
+            android:textSize="@dimen/details_secondary_text" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_settings_middleware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/settings_title_middleware"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <es.guadaltech.odoo.misc.view.EditTextOpenReg
+        android:id="@+id/et_settings_middleware"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/et_red"
+        android:ems="10"
+        android:hint="@string/settings_hint_middleware"
+        android:inputType="number" >
+
+        <requestFocus />
+    </es.guadaltech.odoo.misc.view.EditTextOpenReg>
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_settings_server_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/settings_title_server_ip"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <es.guadaltech.odoo.misc.view.EditTextOpenReg
+        android:id="@+id/et_settings_server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/et_red"
+        android:ems="10"
+        android:hint="@string/settings_hint_server_ip"
+        android:inputType="number" />
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_settings_server_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/settings_title_server_port"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <es.guadaltech.odoo.misc.view.EditTextOpenReg
+        android:id="@+id/et_settings_server_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/et_red"
+        android:ems="10"
+        android:hint="@string/settings_hint_server_port"
+        android:inputType="number" />
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_settings_database_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/settings_title_database"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_settings_database"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <es.guadaltech.odoo.misc.view.ButtonOpenReg
+            android:id="@+id/btn_settings_database"
+            style="@style/btnStyleFlatTurquoise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="4dip"
+            android:layout_weight="4"
+            android:text="@string/settings_button_database" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal" >
+
+        <es.guadaltech.odoo.misc.view.ButtonOpenReg
+            android:id="@+id/btn_settings_logout"
+            style="@style/btnStyleFlatTurquoise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/settings_button_logout" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:orientation="vertical" >
+
+            <es.guadaltech.odoo.misc.view.TextViewOpenReg
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moneda" />
+
+            <Spinner
+                android:id="@+id/sp_sliding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2sp"
+                android:entries="@array/spinner_currency" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_settings_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

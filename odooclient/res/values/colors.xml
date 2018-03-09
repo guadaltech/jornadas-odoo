@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_background">#fff</color>
+    <color name="btn_main_menu">#ddd</color>
+    <color name="btn_main_menu_focused">#bbb</color>
+    <color name="btn_main_menu_pressed">#999</color>
+    <color name="red_openerp">#e10d1c</color>
+    <color name="actionbar_red">#BF0411</color>
+    <color name="row_listcellitem_tv1">#000</color>
+    <color name="row_listcellitem_tv2">#999</color>
+    <color name="row_listcellitem_tv3">#555</color>
+    <color name="bg">#EEEEEE</color>
+
+    <!-- OLD Partner and client details -->
+    <color name="details_primary">#000</color>
+    <color name="details_secondary">#666</color>
+    <color name="details_separator">#999</color>
+    
+    <!-- New odoo palette -->
+    <color name="odoo_primary">#a24689</color>
+    <color name="odoo_primary_darker">#873B72</color>
+    <color name="odoo_primary_lighter">#BA519E</color>
+    <color name="odoo_secondary">#8f8f8f</color>
+    <color name="odoo_secondary_darker">#757575</color>
+    <color name="odoo_secondaty_lighter">#a8a8a8</color>
+    <color name="odoo_optional">#21b799</color>
+    <color name="odoo_optional_darker">#1D9B82</color>
+    <color name="odoo_optional_lighter">#27CEAD</color>
+
+</resources>

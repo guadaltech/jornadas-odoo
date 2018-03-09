@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_order_line_height"
+    android:background="#FFF"
+    android:padding="4dp" >
+
+    <TextView
+        android:id="@+id/tv_row_history_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_row_history_qty"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/dots"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_row_history_priceunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_row_history_name"
+        android:clickable="true"
+        android:gravity="center"
+        android:lines="1"
+        android:longClickable="false"
+        android:text="@string/dots"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_row_history_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_row_history_priceunit"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_row_history_name"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_row_history_priceunit"
+        android:clickable="true"
+        android:gravity="center"
+        android:lines="1"
+        android:longClickable="false"
+        android:text="descuento"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_row_history_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="6dp"
+        android:layout_toLeftOf="@+id/ll_row_history_qty"
+        android:gravity="center"
+        android:lines="1"
+        android:text="cantidad"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_row_history_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/tv_row_history_priceTotal"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_row_history_priceTotal"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="6dp"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
