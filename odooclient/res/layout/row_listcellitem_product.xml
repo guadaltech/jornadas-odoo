@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_listcellitem_height"
+    android:paddingLeft="6dp" >
+
+    <ImageView
+        android:id="@+id/iv_cell_product"
+        android:layout_width="@dimen/row_listcellitem_image_height"
+        android:layout_height="@dimen/row_listcellitem_image_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_diagonal" />
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_cell_product_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@+id/iv_cell_product"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/dots"
+        android:textColor="@color/row_listcellitem_tv1"
+        android:textSize="@dimen/row_listcellitem_tv1_size" />
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_cell_product_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_cell_product_1"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toLeftOf="@+id/iv_cell_product"
+        android:layout_toRightOf="@+id/tv_cell_product_3"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/dots"
+        android:textColor="@color/row_listcellitem_tv2"
+        android:textSize="@dimen/row_listcellitem_tv2_size" />
+
+    <es.guadaltech.odoo.misc.view.TextViewOpenReg
+        android:id="@+id/tv_cell_product_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cell_product_1"
+        android:layout_marginBottom="6dp"
+        android:layout_toRightOf="@+id/iv_cell_product"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/dots"
+        android:textColor="@color/row_listcellitem_tv3"
+        android:textSize="@dimen/row_listcellitem_tv3_size" />
+
+</RelativeLayout>

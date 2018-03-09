@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <FrameLayout
+        android:id="@+id/btn_main_init_sale"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="9"
+        android:background="@drawable/btn_main_menu"
+        android:clickable="true"
+        android:longClickable="false" >
+
+        <ImageView
+            android:id="@+id/iv_main_init_sale"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="16dip"
+            android:src="@drawable/ic_init_sale_512" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenBol
+            android:id="@+id/tv_main_init_sale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dip"
+            android:layout_marginRight="2dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="Iniciar venta"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:id="@+id/btn_main_show_products"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_main_menu"
+            android:clickable="true"
+            android:longClickable="false" >
+
+            <ImageView
+                android:id="@+id/iv_main_show_products"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="8dip"
+                android:src="@drawable/ic_products_hama" />
+
+            <es.guadaltech.odoo.misc.view.TextViewOpenBol
+                android:id="@+id/tv_main_show_products"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Productos"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_main_show_partners"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_main_menu"
+            android:clickable="true"
+            android:longClickable="false" >
+
+            <ImageView
+                android:id="@+id/iv_main_show_partners"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="8dip"
+                android:src="@drawable/ic_clients_256" />
+
+            <es.guadaltech.odoo.misc.view.TextViewOpenBol
+                android:id="@+id/tv_main_show_partners"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="6dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Clientes"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_main_show_history"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_main_menu"
+            android:clickable="true"
+            android:longClickable="false" >
+
+            <ImageView
+                android:id="@+id/iv_main_show_history"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="8dip"
+                android:src="@drawable/ic_history_256" />
+
+            <es.guadaltech.odoo.misc.view.TextViewOpenBol
+                android:id="@+id/tv_main_show_history"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Historial"
+                android:textSize="16sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

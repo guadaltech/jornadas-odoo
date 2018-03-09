@@ -1,0 +1,88 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:id="@+id/tv_login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <RelativeLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_alignParentTop="true"
+            android:id="@+id/ll_login_container"
+            android:orientation="vertical" >
+
+            <es.guadaltech.odoo.misc.view.EditTextOpenReg
+                android:id="@+id/et_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_red"
+                android:hint="@string/prompt_email"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <es.guadaltech.odoo.misc.view.EditTextOpenReg
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_red"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <es.guadaltech.odoo.misc.view.ButtonOpenReg
+            android:id="@+id/btn_login_signin"
+            style="@style/btnStyleFlatTurquoise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:layout_below="@+id/ll_login_container"
+            android:layout_marginTop="24dp"
+            android:text="@string/action_sign_in_register" />
+
+        <es.guadaltech.odoo.misc.view.TextViewOpenReg
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:text="@string/login_nota" />
+        
+    </RelativeLayout>
+
+</merge>

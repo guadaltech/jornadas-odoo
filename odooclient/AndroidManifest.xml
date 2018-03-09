@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.guadaltech.odoo"
+    android:versionCode="1403609419"
+    android:versionName="1.0000" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="es.guadaltech.odoo.LoginActivity"
+            android:theme="@style/Theme.VeryFirstActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.ShowProductListActivity"
+            android:icon="@drawable/ic_launcher" >
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.PartnerShowDetailsActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.MainActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.SettingsActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.misc.TestActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.misc.TestBarcodeScannerActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.ProductShowDetailsActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.ShowPartnersListActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.HistoryActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.HistoryShowDetailsActivity">
+        </activity>
+        <activity
+            android:name="es.guadaltech.odoo.TPVActivity"
+            android:configChanges="orientation|screenLayout|screenSize"       
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.dm.zbar.android.scanner.ZBarScannerActivity"     
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+        <activity android:name="es.guadaltech.odoo.InitSaleActivity" >
+        </activity>
+
+        <provider
+            android:name="es.guadaltech.odoo.misc.ProductImageContentProvider"
+            android:authorities="es.guadaltech.odoo.provider"
+            android:exported="false"
+            android:syncable="false" />
+    </application>
+
+</manifest>

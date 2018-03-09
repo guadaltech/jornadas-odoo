@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">odoo</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="empty"></string>
+
+    <!-- Login activity -->
+    <string name="login_title">Login to OpenERP server</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_hint_server_url">URL del servidor</string>
+    <string name="login_hint_server_port">Puerto</string>
+    <string name="login_hint_username">Usuario</string>
+    <string name="login_hint_password">Contraseña</string>
+    <string name="login_hint_database">Base de datos</string>
+    <string name="login_hint_method">Método</string>
+    <string name="login_hint_model">Modelo</string>
+    <string name="login_nota">Nota: Use algún patrón de desbloqueo o contraseña en su terminal para evitar usos de la aplicación no autorizados.</string>
+
+    <!-- Main menu -->
+    <string name="tv_main_init_sale">Iniciar venta</string>
+    <string name="tv_main_show_partners">Clientes</string>
+    <string name="tv_main_show_products">Productos</string>
+    <string name="tv_main_show_history">Historial</string>
+
+    <!-- Action bar -->
+    <string name="ab_title_login">Inicio de sesión</string>
+    <string name="ab_title_main">odoo</string>
+    <string name="ab_title_details">Detalles</string>
+    <string name="ab_title_partners_list">Clientes</string>
+    <string name="ab_title_products_list">Productos</string>
+    <string name="ab_title_history">Historial</string>
+    <string name="ab_title_init_sale">Iniciar venta</string>
+    <string name="ab_title_tpv">Punto de venta</string>
+    <string name="ab_title_settings">Ajustes</string>
+    <string name="action_refresh">Actualizar</string>
+    <string name="action_show">Búsqueda y filtros</string>
+
+    <!-- Settings activity -->
+    <string name="ab_action_save">Guardar</string>
+    <string name="ab_action_cancel">Cancelar</string>
+    <string name="settings_title_middleware">IP middleware</string>
+    <string name="settings_hint_middleware">Ej: http://12.34.56.78</string>
+    <string name="settings_title_server_ip">IP OpenERP</string>
+    <string name="settings_hint_server_ip">Ej: 12.34.56.79</string>
+    <string name="settings_title_server_port">Puerto OpenERP</string>
+    <string name="settings_hint_server_port">Ej: 1234</string>
+    <string name="settings_title_database">Base de datos</string>
+    <string name="settings_button_database">Seleccionar</string>
+    <string name="settings_button_logout">Cerrar sesión</string>
+    <string name="settings_dialog_title_databases">Bases de datos</string>
+    <string name="settings_dialog_databases_cancel">Cancelar</string>
+    <string name="settings_dialog_databases_error">No se han encontrado bases de datos disponibles</string>
+    <string name="settings_dialog_server_error">Error accediendo al servidor</string>
+    <string name="settings_dialog_databases_sucess">Ajustes guardados correctamente</string>
+
+    <!-- Init sale activity -->
+    <string name="seleccionar_cliente">Seleccionar cliente</string>
+    <string name="init_sale_tienda">Tienda</string>
+    <string name="init_sale_tarifa">Tarifa</string>
+    <string name="init_sale_diario">Diario</string>
+
+    <!-- TPV -->
+    <string name="row_orderline_discount">Sin desc.</string>
+    <string name="row_orderline_qty_default">1</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="dots">"&#8230;"</string>
+    <string name="tpv_cliente">Cliente</string>
+    <string name="tpv_total">Total</string>
+    <string name="tpv_crear_order">Crear lineas</string>
+    <string name="tpv_crear_sale">Crear venta</string>
+
+    <!-- Spinner -->
+    <string name="slider_buscar_aqui">Busca aquí</string>
+    <string name="slider_radio">Radio de búsqueda</string>
+    <string name="slider_buscar"> Buscar </string>
+    <string name="slider_favs">Favoritos</string>
+    <string name="slider_settings">Ajustes</string>
+    <string name="slider_buscar_por">Buscar por</string>
+    <string name="drawer_open">drawer open description</string>
+    <string name="drawer_close">drawer close description</string>
+
+    <!-- Activity Partner Showdetails -->
+    <string name="partner_details_name">Nombre</string>
+    <string name="partner_details_mobile">Tel. móvil</string>
+    <string name="partner_details_phone">Teléfono</string>
+    <string name="partner_details_emails">Correo</string>
+    <string name="partner_details_city">Ciudad</string>
+    <string name="partner_details_function">Puesto</string>
+    <string name="partner_details_iscustomer">Es cliente</string>
+    <string name="partner_details_issupplier">Es proveedor</string>
+    <string name="partner_details_sales_history">Historial de ventas</string>
+
+    <!-- Activity Product Showdetails -->
+    <string name="product_details_soldable">¿Puede ser vendido?</string>
+    <string name="product_details_expensable">¿Puede ser un gasto?</string>
+    <string name="product_details_purchase">¿Puede ser comprado?</string>
+    <!-- Activity History -->
+    <string name="history_cliente">Cliente: </string>
+    <string name="history_id">ID: </string>
+    <string name="history_fecha">Fecha: </string>
+    <string name="history_total">Total: </string>
+    <string name="history_referencia">Referencia: </string>
+
+    <!-- Common -->
+    <string name="common_currency">€</string>
+    <string name="common_date_format">dd/MM  HH:mm</string>
+    <string name="common_font">RobotoSlab-Bold</string>
+    <string name="common_percent">%</string>
+
+    <!-- OpenERP Models -->
+    <string name="oerp_tienda">sale.shop</string>
+    <string name="oerp_tarifa">product.pricelist</string>
+    <string name="oerp_diario">account.journal</string>
+
+</resources>
